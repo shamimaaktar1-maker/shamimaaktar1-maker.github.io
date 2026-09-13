@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shamima Akter — Migration Officer &amp; Operations Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12161B;
+    --ink-2:#1B2129;
+    --paper:#EAE6D8;
+    --brass:#A9782E;
+    --brass-light:#C99B4B;
+    --line:#2B323A;
+    --line-light:#CFC7AE;
+    --text-hi:#F2EFE7;
+    --text-lo:#9AA2AB;
+    --text-ink:#22262B;
+    --text-ink-soft:#5B5F63;
+    --maxw:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--text-hi);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  section{padding:110px 32px;}
+  .inner{max-width:var(--maxw); margin:0 auto;}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(18,22,27,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    max-width:var(--maxw); margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 32px;
+  }
+  nav .logo{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;
+    display:flex; align-items:center; gap:10px;
+  }
+  nav .logo .dot{width:9px;height:9px;border-radius:50%;background:var(--brass);}
+  nav ul{display:flex; gap:30px; list-style:none;}
+  nav ul li a{
+    font-family:'IBM Plex Mono',monospace; font-size:0.82rem; color:var(--text-lo);
+    transition:color .15s ease;
+  }
+  nav ul li a:hover{color:var(--brass-light);}
+  nav .cta{
+    font-family:'IBM Plex Mono',monospace; font-size:0.82rem;
+    border:1px solid var(--brass); color:var(--brass-light);
+    padding:9px 16px; border-radius:2px; transition:background .15s ease, color .15s ease;
+  }
+  nav .cta:hover{background:var(--brass); color:var(--ink);}
+  .nav-links-mobile{display:none;}
+
+  /* ---------- HERO ---------- */
+  #hero{
+    padding-top:70px; padding-bottom:0;
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+    min-height:88vh; justify-content:center; position:relative;
+  }
+  #hero .kicker{
+    font-family:'IBM Plex Mono',monospace; font-size:0.82rem; color:var(--brass-light);
+    letter-spacing:0.02em; margin-bottom:22px;
+  }
+  #hero h1{
+    font-family:'Fraunces', serif; font-weight:600;
+    font-size:clamp(3rem, 8vw, 5.6rem); line-height:1; letter-spacing:-0.01em;
+  }
+  #hero .roles{
+    margin-top:20px; font-family:'IBM Plex Mono',monospace; font-size:1rem; color:var(--text-lo);
+  }
+  #hero .roles .sep{color:var(--brass); margin:0 10px;}
+  #hero .hero-cta{
+    margin-top:38px; display:flex; gap:16px;
+  }
+  #hero .btn{
+    font-family:'IBM Plex Mono',monospace; font-size:0.85rem;
+    padding:13px 24px; border-radius:2px; transition:all .15s ease;
+  }
+  #hero .btn.primary{background:var(--brass); color:var(--ink);}
+  #hero .btn.primary:hover{background:var(--brass-light);}
+  #hero .btn.ghost{border:1px solid var(--line); color:var(--text-hi);}
+  #hero .btn.ghost:hover{border-color:var(--brass); color:var(--brass-light);}
+
+  /* marquee */
+  .marquee{
+    width:100%; overflow:hidden; margin-top:80px;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:20px 0;
+  }
+  .marquee-track{
+    display:flex; gap:40px; white-space:nowrap;
+    animation:scroll 26s linear infinite;
+    font-family:'IBM Plex Mono',monospace; font-size:0.85rem; color:var(--text-lo);
+  }
+  .marquee-track span{display:flex; align-items:center; gap:40px;}
+  .marquee-track span::after{content:"—"; color:var(--brass);}
+  @keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .eyebrow-line{display:flex; align-items:center; gap:14px; margin-bottom:30px;}
+  .eyebrow-line .tag{
+    font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--brass-light);
+    border:1px solid var(--line); padding:4px 10px; border-radius:2px;
+  }
+  .eyebrow-line .rule{flex:1; height:1px; background:var(--line);}
+  h2.section-title{
+    font-family:'Fraunces', serif; font-weight:600; font-size:2.1rem; margin-bottom:36px;
+    max-width:640px;
+  }
+
+  /* ---------- ABOUT ---------- */
+  #about .about-grid{display:grid; grid-template-columns:1.2fr 1fr; gap:50px; align-items:start;}
+  #about p.lead{color:var(--text-lo); font-size:1.05rem; max-width:520px;}
+  .stats-row{display:grid; gap:26px;}
+  .stat{border-left:2px solid var(--brass); padding-left:20px;}
+  .stat .figure{font-family:'Fraunces', serif; font-weight:600; font-size:2.1rem;}
+  .stat .label{font-family:'IBM Plex Mono',monospace; font-size:0.74rem; color:var(--text-lo); margin-top:4px;}
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline-item{
+    display:grid; grid-template-columns:150px 1fr; gap:30px;
+    padding:34px 0; border-top:1px solid var(--line);
+  }
+  .timeline-item:first-of-type{border-top:1px solid var(--line);}
+  .timeline-item .when{font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--brass-light);}
+  .timeline-item h3{font-family:'Fraunces', serif; font-weight:600; font-size:1.4rem; margin-bottom:2px;}
+  .timeline-item .org{color:var(--text-lo); font-size:0.92rem; margin-bottom:18px;}
+  .timeline-item ul{list-style:none; display:grid; gap:11px;}
+  .timeline-item li{padding-left:20px; position:relative; font-size:0.96rem; color:var(--text-hi);}
+  .timeline-item li::before{content:"—"; position:absolute; left:0; color:var(--brass);}
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .skill-card{border:1px solid var(--line); border-radius:3px; padding:32px;}
+  .skill-card h4{font-family:'Fraunces', serif; font-size:1.2rem; font-weight:600; margin-bottom:18px;}
+  .skill-card ul{list-style:none; display:grid; gap:12px;}
+  .skill-card li{padding-left:20px; position:relative; color:var(--text-lo); font-size:0.94rem;}
+  .skill-card li::before{content:"—"; position:absolute; left:0; color:var(--brass);}
+
+  /* ---------- EDUCATION ---------- */
+  .edu-list{display:grid; gap:0;}
+  .edu-row{
+    display:grid; grid-template-columns:120px 1fr; gap:24px;
+    padding:24px 0; border-bottom:1px solid var(--line);
+  }
+  .edu-row:last-child{border-bottom:none;}
+  .edu-row .years{font-family:'IBM Plex Mono',monospace; font-size:0.82rem; color:var(--brass-light);}
+  .edu-row h4{font-family:'Fraunces', serif; font-size:1.15rem; font-weight:600; margin-bottom:4px;}
+  .edu-row p{color:var(--text-lo); font-size:0.9rem;}
+
+  /* ---------- REFERENCES ---------- */
+  .ref-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px;}
+  .ref-card{border:1px solid var(--line); padding:24px; border-radius:3px;}
+  .ref-card .name{font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem; margin-bottom:4px;}
+  .ref-card .role{font-size:0.85rem; color:var(--text-lo); margin-bottom:12px;}
+  .ref-card .contact{font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:var(--brass-light); word-break:break-word;}
+
+  /* ---------- CONTACT ---------- */
+  #contact{background:var(--paper); color:var(--text-ink); border-radius:3px; margin:0 32px 60px; padding:70px 50px;}
+  #contact .inner{max-width:var(--maxw);}
+  #contact h2.section-title{color:var(--text-ink);}
+  #contact .eyebrow-line .tag{color:var(--brass); border-color:var(--line-light);}
+  #contact .eyebrow-line .rule{background:var(--line-light);}
+  .contact-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:50px; align-items:start;}
+  .contact-list{display:grid; gap:16px;}
+  .contact-list .row{display:flex; gap:16px; align-items:baseline;}
+  .contact-list .label{width:90px; font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--text-ink-soft);}
+  .contact-list .value a{border-bottom:1px solid var(--line-light); transition:color .15s ease, border-color .15s ease;}
+  .contact-list .value a:hover{color:var(--brass); border-color:var(--brass);}
+  .copy-btn{
+    margin-top:16px; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--text-ink-soft);
+    border:1px solid var(--line-light); background:none; padding:8px 14px; border-radius:2px; cursor:pointer;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .copy-btn:hover{color:var(--brass); border-color:var(--brass);}
+  .interests-box{border-left:2px solid var(--brass); padding-left:22px;}
+  .interests-box h4{font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--brass); margin-bottom:12px;}
+  .interests-box p{color:var(--text-ink-soft); font-size:0.95rem;}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:40px 32px; border-top:1px solid var(--line);}
+  footer .inner{max-width:var(--maxw); margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;}
+  footer .brand{font-family:'Fraunces', serif; font-weight:600;}
+  footer .col p, footer .col a{display:block; font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:var(--text-lo); margin-top:8px;}
+  footer .col h5{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--brass-light); margin-bottom:6px;}
+  footer .bottom{width:100%; margin-top:30px; padding-top:20px; border-top:1px solid var(--line); font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--text-lo); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width:900px){
+    nav ul{display:none;}
+    .about-grid, .skills-grid, .contact-grid{grid-template-columns:1fr !important; gap:34px !important;}
+    .timeline-item, .edu-row{grid-template-columns:1fr !important; gap:8px !important;}
+    #contact{margin:0 16px 40px; padding:50px 26px;}
+    section{padding:80px 20px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo"><span class="dot"></span> Shamima Akter</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+    <a class="cta" href="#contact">Contact Me ↗</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <div class="inner" style="display:flex;flex-direction:column;align-items:center;">
+    <div class="kicker">Hi, it's me</div>
+    <h1>Shamima Akter</h1>
+    <div class="roles">Migration Officer<span class="sep">/</span>Operations &amp; Compliance</div>
+    <div class="hero-cta">
+      <a class="btn primary" href="#contact">Contact Me ↗</a>
+      <a class="btn ghost" href="#experience">View Experience ↗</a>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>VISA CASEWORK</span><span>FINANCIAL RECONCILIATION</span><span>INTERNAL CONTROLS</span><span>LOAN PROCESSING</span><span>CLIENT RELATIONS</span><span>COMPLIANCE</span>
+      <span>VISA CASEWORK</span><span>FINANCIAL RECONCILIATION</span><span>INTERNAL CONTROLS</span><span>LOAN PROCESSING</span><span>CLIENT RELATIONS</span><span>COMPLIANCE</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="inner">
+    <div class="eyebrow-line"><span class="tag">About Shamima →</span><div class="rule"></div></div>
+    <h2 class="section-title">A finance &amp; operations graduate working in migration services</h2>
+    <div class="about-grid">
+      <p class="lead">I'm a Finance and Computer Information Systems graduate working across migration casework, financial reconciliation, and internal controls. I keep processes accurate and on schedule, and I'm looking to move further into business analysis, project management, and data-driven operations.</p>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="figure">100</div>
+          <div class="label">OFFSHORE VISA CASES PROCESSED</div>
+        </div>
+        <div class="stat">
+          <div class="figure">150+</div>
+          <div class="label">ONSHORE VISA CASES PROCESSED</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="inner">
+    <div class="eyebrow-line"><span class="tag">Experience →</span><div class="rule"></div></div>
+    <h2 class="section-title">Where I've worked</h2>
+    <div class="timeline-item">
+      <div class="when">Sept 2025 —<br>Present</div>
+      <div>
+        <h3>Migration Officer</h3>
+        <div class="org">StudyNet Pty Ltd, Mohakhali, Dhaka</div>
+        <ul>
+          <li>Flag concerns and progress to the supervisor promptly, so remediation happens before small issues grow</li>
+          <li>Build and hold steady relationships with staff, students, agents and customers</li>
+          <li>Enforce corporate policy and regulatory compliance across day-to-day operations</li>
+          <li>Answer customer needs quickly and resolve problems at the first point of contact</li>
+          <li>Prepare monthly management accounts and reconciliations from income statements and cash flow data</li>
+          <li>Work extensively in spreadsheets to analyze and integrate high-volume databases</li>
+          <li>Run regular reviews of internal controls to keep financial reporting accurate</li>
+          <li>Processed 100 offshore and 150+ onshore Australian visa cases to date</li>
+          <li>Examine, evaluate and process loan applications</li>
+          <li>Direct insurance negotiations — selecting brokers and carriers and placing cover</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="inner">
+    <div class="eyebrow-line"><span class="tag">Skills →</span><div class="rule"></div></div>
+    <h2 class="section-title">What I bring to the table</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>Finance &amp; Accounting</h4>
+        <ul>
+          <li>Finance &amp; accounting oversight</li>
+          <li>General ledger accounting</li>
+          <li>Accounting &amp; bookkeeping</li>
+          <li>Invoice balancing</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Operations &amp; Tools</h4>
+        <ul>
+          <li>Administrative support</li>
+          <li>Team collaboration</li>
+          <li>MS Office Suite</li>
+          <li>macOS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="inner">
+    <div class="eyebrow-line"><span class="tag">Education →</span><div class="rule"></div></div>
+    <h2 class="section-title">Academic background</h2>
+    <div class="edu-list">
+      <div class="edu-row">
+        <span class="years">2021–2026</span>
+        <div>
+          <h4>BBA in Finance, Computer Information &amp; Technology (CIM)</h4>
+          <p>BRAC University, Bangladesh · CGPA 2.79</p>
+        </div>
+      </div>
+      <div class="edu-row">
+        <span class="years">2018–2020</span>
+        <div>
+          <h4>Higher Secondary Certificate — Commerce</h4>
+          <p>Bangladesh International School &amp; College, Jeddah, KSA · GPA 4.42</p>
+        </div>
+      </div>
+      <div class="edu-row">
+        <span class="years">2016–2018</span>
+        <div>
+          <h4>Secondary School Certificate — Commerce</h4>
+          <p>Bangladesh International School &amp; College, Jeddah, KSA · GPA 4.33</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="references">
+  <div class="inner">
+    <div class="eyebrow-line"><span class="tag">References →</span><div class="rule"></div></div>
+    <h2 class="section-title">People who know my work</h2>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <div class="name">Dr. Syed Far Abid Hossain</div>
+        <div class="role">Associate Professor, BRAC Business School</div>
+        <div class="contact">syed.farabid@bracu.ac.bd</div>
+      </div>
+      <div class="ref-card">
+        <div class="name">Dr. Mohammad Enamul Hoque</div>
+        <div class="role">Associate Professor, BRAC Business School</div>
+        <div class="contact">enamul.hoque@bracu.ac.bd</div>
+      </div>
+      <div class="ref-card">
+        <div class="name">Ronald Shaikat Halder</div>
+        <div class="role">Assistant Manager (Migration), StudyNet Pty Ltd</div>
+        <div class="contact">ronald.halder@studynetglobal.com</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="inner">
+    <div class="eyebrow-line"><span class="tag">Contact →</span><div class="rule"></div></div>
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-grid">
+      <div class="contact-list">
+        <div class="row">
+          <span class="label">Email</span>
+          <span class="value"><a href="mailto:shamimamaya90@gmail.com">shamimamaya90@gmail.com</a></span>
+        </div>
+        <div class="row">
+          <span class="label">Phone</span>
+          <span class="value"><a href="tel:+8801580352417">01580352417</a></span>
+        </div>
+        <div class="row">
+          <span class="label">LinkedIn</span>
+          <span class="value"><a href="https://www.linkedin.com/in/shamima-aktar-maya-7bbb0221a/" target="_blank" rel="noopener">LinkedIn ↗</a></span>
+        </div>
+        <div class="row">
+          <span class="label">Location</span>
+          <span class="value">Dhaka, Bangladesh</span>
+        </div>
+        <button class="copy-btn" id="copyEmailBtn">Copy email address</button>
+      </div>
+      <div class="interests-box">
+        <h4>Open to</h4>
+        <p>Business Management, Finance, Project Management, IT Consulting, Business Analysis, Data Analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <div class="col">
+      <div class="brand">Shamima Akter</div>
+      <p>Finance &amp; operations graduate working in migration services and compliance.</p>
+    </div>
+    <div class="col">
+      <h5>Navigate</h5>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#references">References</a>
+    </div>
+    <div class="col">
+      <h5>Contact</h5>
+      <a href="mailto:shamimamaya90@gmail.com">shamimamaya90@gmail.com</a>
+      <a href="tel:+8801580352417">01580352417</a>
+      <a href="https://www.linkedin.com/in/shamima-aktar-maya-7bbb0221a/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="bottom">
+      <span>© 2026 Shamima Akter</span>
+      <span>Dhaka, Bangladesh</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Smooth active-link tracking (subtle nav highlight while scrolling)
+  const navLinks = document.querySelectorAll('nav ul li a');
+  const sections = document.querySelectorAll('section[id]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.style.color = '');
+        const match = document.querySelector(`nav ul li a[href="#${entry.target.id}"]`);
+        if (match) match.style.color = 'var(--brass-light)';
+      }
+    });
+  }, { threshold: 0.5 });
+  sections.forEach(s => observer.observe(s));
+
+  // Copy email to clipboard
+  const copyBtn = document.getElementById('copyEmailBtn');
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText('shamimamaya90@gmail.com').then(() => {
+      copyBtn.textContent = 'Copied ✓';
+      setTimeout(() => { copyBtn.textContent = 'Copy email address'; }, 1800);
+    });
+  });
+</script>
+
+</body>
+</html>
